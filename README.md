@@ -3,8 +3,9 @@
 A crossword generator website in vanilla HTML, CSS and JavaScript — no
 frameworks, no build step — deployed with GitHub Pages.
 
-Currently it shows a 15×15 grid with a rotationally symmetric pattern of
-black squares, automatic clue numbering, and keyboard letter entry.
+Currently it shows a filled 15×15 puzzle with Across and Down clues, a
+tropical island theme, automatic clue numbering, keyboard entry, and
+Check / Reveal / Clear buttons.
 
 ## Files
 
@@ -12,7 +13,7 @@ black squares, automatic clue numbering, and keyboard letter entry.
 | --- | --- |
 | `index.html` | Page markup |
 | `styles.css` | Styles (light/dark aware) |
-| `script.js` | Grid pattern, numbering and keyboard input |
+| `script.js` | Puzzle answers and clues, numbering, keyboard input, check/reveal |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is, without Jekyll |
 
 ## Run locally
