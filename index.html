@@ -6,26 +6,81 @@
   <title>Crossword Generator</title>
   <meta name="description" content="A crossword generator built with vanilla HTML, CSS and JavaScript." />
   <link rel="icon" href="data:," />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" />
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
+  <div class="scenery" aria-hidden="true">
+    <svg class="sun" viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" /><g class="rays"><path d="M50 4v10M50 86v10M4 50h10M86 50h10M17 17l7 7M76 76l7 7M17 83l7-7M76 24l7-7" /></g></svg>
+    <svg class="palm palm-left" viewBox="0 0 200 300">
+      <path class="trunk" d="M104 300 C100 230 92 170 112 100" />
+      <g class="fronds">
+        <path d="M112 100 C80 70 40 72 8 98 C44 86 78 90 112 100Z" />
+        <path d="M112 100 C92 58 60 40 22 42 C58 56 86 74 112 100Z" />
+        <path d="M112 100 C118 60 140 34 178 28 C148 50 128 72 112 100Z" />
+        <path d="M112 100 C146 80 180 86 198 112 C168 100 140 98 112 100Z" />
+        <path d="M112 100 C110 70 100 40 84 18 C112 38 118 66 112 100Z" />
+      </g>
+      <circle class="coconut" cx="108" cy="106" r="6" /><circle class="coconut" cx="119" cy="108" r="5.5" />
+    </svg>
+    <svg class="palm palm-right" viewBox="0 0 200 300">
+      <path class="trunk" d="M104 300 C100 230 92 170 112 100" />
+      <g class="fronds">
+        <path d="M112 100 C80 70 40 72 8 98 C44 86 78 90 112 100Z" />
+        <path d="M112 100 C92 58 60 40 22 42 C58 56 86 74 112 100Z" />
+        <path d="M112 100 C118 60 140 34 178 28 C148 50 128 72 112 100Z" />
+        <path d="M112 100 C146 80 180 86 198 112 C168 100 140 98 112 100Z" />
+        <path d="M112 100 C110 70 100 40 84 18 C112 38 118 66 112 100Z" />
+      </g>
+      <circle class="coconut" cx="108" cy="106" r="6" /><circle class="coconut" cx="119" cy="108" r="5.5" />
+    </svg>
+  </div>
+
   <header class="site-header">
-    <h1>Crossword Generator</h1>
-    <p class="tagline">A 15&times;15 crossword grid.</p>
+    <h1>Island Crossword</h1>
+    <p class="tagline">Kick back in the shade and fill in a 15&times;15 grid, one sunny square at a time.</p>
   </header>
 
-  <main>
-    <div id="grid" class="grid" role="grid" aria-label="Crossword grid"></div>
-    <p class="hint">
-      Click a square and type. Arrow keys move, <kbd>Space</kbd> or clicking
-      the selected square switches between across and down.
-    </p>
+  <main class="puzzle">
+    <div class="board">
+      <p id="current-clue" class="current-clue" aria-live="polite">&nbsp;</p>
+      <div id="grid" class="grid" role="grid" aria-label="Crossword grid"></div>
+      <div class="controls">
+        <button id="check" type="button">Check</button>
+        <button id="reveal" type="button">Reveal</button>
+        <button id="clear" type="button">Clear</button>
+      </div>
+      <p id="status" class="status" aria-live="polite"></p>
+      <p class="hint">
+        Click a square or a clue and type. Arrow keys move, <kbd>Space</kbd> or
+        clicking the selected square switches between across and down.
+      </p>
+    </div>
+
+    <section class="clues" aria-label="Clues">
+      <div class="clue-list">
+        <h2>Across</h2>
+        <ol id="across-clues"></ol>
+      </div>
+      <div class="clue-list">
+        <h2>Down</h2>
+        <ol id="down-clues"></ol>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p>Built with plain web technologies.</p>
+    <svg class="waves" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+      <path class="wave wave-back" d="M0 40 C150 10 300 70 450 40 C600 10 750 70 900 40 C1050 10 1150 60 1200 40 V80 H0Z" />
+      <path class="wave wave-front" d="M0 55 C150 30 300 80 450 55 C600 30 750 80 900 55 C1050 30 1150 75 1200 55 V80 H0Z" />
+    </svg>
+    <div class="sand">
+      <p>Built with plain web technologies, sunscreen, and a cold coconut.</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
