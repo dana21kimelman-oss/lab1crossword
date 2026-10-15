@@ -3,27 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lab 1</title>
-  <meta name="description" content="A vanilla HTML, CSS and JavaScript page hosted on GitHub Pages." />
+  <title>Crossword Generator</title>
+  <meta name="description" content="A crossword generator built with vanilla HTML, CSS and JavaScript." />
   <link rel="icon" href="data:," />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <h1>Lab 1</h1>
-    <p class="tagline">A vanilla HTML, CSS &amp; JavaScript page.</p>
+    <h1>Crossword Generator</h1>
+    <p class="tagline">A 15&times;15 crossword grid.</p>
   </header>
 
   <main>
-    <section class="card">
-      <h2>Hello</h2>
-      <p>
-        No frameworks, no build step. Edit <code>index.html</code>,
-        <code>styles.css</code> and <code>script.js</code>, push to
-        <code>main</code>, and GitHub Pages serves the result.
-      </p>
-      <button id="counter" type="button">Clicked <span id="count">0</span> times</button>
-    </section>
+    <div id="grid" class="grid" role="grid" aria-label="Crossword grid"></div>
+    <p class="hint">
+      Click a square and type. Arrow keys move, <kbd>Space</kbd> or clicking
+      the selected square switches between across and down.
+    </p>
   </main>
 
   <footer class="site-footer">

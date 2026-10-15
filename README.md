@@ -1,7 +1,10 @@
-# Lab 1
+# Crossword Generator
 
-A vanilla HTML, CSS and JavaScript webpage — no frameworks, no build step —
-deployed with GitHub Pages.
+A crossword generator website in vanilla HTML, CSS and JavaScript — no
+frameworks, no build step — deployed with GitHub Pages.
+
+Currently it shows a 15×15 grid with a rotationally symmetric pattern of
+black squares, automatic clue numbering, and keyboard letter entry.
 
 ## Files
 
@@ -9,7 +12,7 @@ deployed with GitHub Pages.
 | --- | --- |
 | `index.html` | Page markup |
 | `styles.css` | Styles (light/dark aware) |
-| `script.js` | Page behaviour |
+| `script.js` | Grid pattern, numbering and keyboard input |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is, without Jekyll |
 
 ## Run locally
